@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Apun ki CV</title>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+       body{
+         background: lightblue;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+      }
+      .container{
+         position: relative;
+         width: 100%;
+          max-width: 1000px;
+          margin-bottom: 1px;
+         background: #fff;
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin-top: 20px;
+         box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+        }
+      .header {
+    background-color: #2c1c60;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1; 
+        }
+.header-title {
+    font-size: 2em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: fixed;
+}
+      .container .left-side{
+         position: relative;
+         background: #96ecea;
+         padding: 40px;
+         width: 30%;
+      }
+      .container .middle-side{
+         /* margin-top: 60px; */
+         position: relative;
+         background: #fff;
+         padding: 40px;
+         width: 70%;
+      }
+      .profiletext{
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-bottom: 20px;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .profiletext .imagebox{
+         position: relative;
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         overflow: hidden; 
+      }
+      .profiletext .imagebox img{
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      .profiletext h2{  
+         color: #2c1c60;
+         font-size: 1.5em;
+         margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+      font-weight: 600;
+      line-height: 1.4em;
+      }
+      .profiletext h2 span{
+         font-size: 0.8em;
+         font-weight: 300;
+      }
+      .text1{
+         font-size: 12px; ;
+      }
+      img{
+         width: 242px;
+         height: 229px;
+      }
+      .about{
+         margin-bottom: 50px;
+      }
+      .about:last-child{
+         margin-bottom: 0;
+      }
+      .title2{
+         color: #003147;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         margin-bottom: 14px;
+      }
+      p{
+         color: #464b15;
+      }
+      .skills .box{
+         position: relative;
+         width: 100%;
+         display: grid;
+         grid-template-columns: 150px 1fr;
+         justify-content: center;
+         align-items: center;
+      }
+      .skills .box h4{
+         text-transform: uppercase;
+         color: #011a42;
+         font-weight: 500;
+      }
+      .skills .box .percent{
+         position: relative;
+         width: 100%;
+         height: 10px;
+         background: #f0f0f0;
+      }
+      .skills .box .percent div{
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         background: #054461;
+      }
+      .interest ol{
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+      }
+      .interest ol li{
+         list-style: none;
+         color: #333;
+         font-weight: 500;
+         margin: 10px 0;
+      }
+      .interest ol li .fa{
+         width: 20px;
+         color: #03a9f4;
+         margin: 10px 0;
+      }
+      .header{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+      audio{
+         margin-left: -40px;
+      }
+      .educationinfo {
+         margin-left: 33px
+      }
+      .educationinfo li{
+         margin-bottom: 25px;
+         list-style: none;
+      }
+      .educationinfo h5{
+         color: #08c5f1;
+         font-weight: 500;
+      }
+      .educationinfo h4{
+         color: #082ff1;
+         font-weight: 500;
+      }
+      .right-side {
+         width: 23%;
+         max-width: 289px;
+         background: #96ecea;
+         padding: 2px;
+         position: absolute;
+         top: 0px;
+         right: -9px;
+         margin-right: 9px;
+       }
+
+        .right-side h1 {
+          color: #2c1c60;
+          font-size: 1.8em;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+        .right-side h4 {
+          color: #2c1c60;
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-side,
+  .middle-side,
+  .right-side {
+    width: 100%;
+  }
+}
+      footer{
+         background: #111;
+         height: 133px;
+         width: 100vw;
+         font-family:'Times New Roman', Times, serif;
+         color: #fff;
+         cursor: pointer;
+      }
+      .footer-content{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         text-align: center;
+      }
+      .footer-content h3{
+         font-size: 1.8rem;
+         font-weight: 400;
+         line-height: 3rem;
+      }
+      .socials{
+         list-style: none;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 1rem 0 3rem 0;
+      }
+      .socials li{
+         margin: 0 10px;
+      }
+      .socials a{
+         text-transform: none;
+         color: #fff;
+      }
+      .socials a i{
+         font-size: 1.1em;
+         transition: color .4s ease;
+      }
+      .socials a:hover i{
+         color: aqua;
+      }
+      .aim h2{
+         text-align: center;
+         color: #2c1c60;
+      }
+      .country{
+         text-align: center;
+         color: #2c1c60;
+      }
+      .Pakistan{
+         text-align: center;
+         color: #2c1c60;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <header class="header">
+          <h1 class="header-title">Muhammad Fazeel Farooq</h1>
+      </header>
+   <div class="container">
+      <div class="left-side">
+         <div class="about skills">
+            <h2 class="title2">Professional Skills</h2>
+            <div class="box">
+               <h4>HTML5</h4>
+               <div class="percent">
+                  <div style="width: 95%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>CSS3</h4>
+               <div class="percent">
+                  <div style="width: 70%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Bootstrap CSS</h4>
+               <div class="percent">
+                  <div style="width: 95%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Tailwind CSS</h4>
+               <div class="percent">
+                  <div style="width: 50%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Javacript</h4>
+               <div class="percent">
+                  <div style="width: 95%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>React.js</h4>
+               <div class="percent">
+                  <div style="width: 70%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Node.js</h4>
+               <div class="percent">
+                  <div style="width: 65%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Express.js</h4>
+               <div class="percent">
+                  <div style="width: 10%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>MongoDb</h4>
+               <div class="percent">
+                  <div style="width: 40%;"></div>
+               </div>
+            </div>
+            <div class="box">
+               <h4>Vite.js</h4>
+               <div class="percent">
+                  <div style="width: 40%;"></div>
+               </div>
+            </div>
+         </div>
+         <div>
+            <audio controls loop
+            src="01. Main Theme.mp3"></audio>
+         </div>
+         <div>
+            <video controls src="Induction motor start 😂-3 idiots-funny scene.mp4" width="250px" height="700px"></video>
+         </div>
+      </div>
+      <div class="middle-side">
+         <div class="profiletext">
+            <div class="imagebox">
+               <img src="profile-pic.png" alt="">
+            </div>
+            <h2>Muhammad Fazeel Farooq <br><span>MERN Developer</span></h2>
+         </div>
+         <div class="about">
+            <h2 class="title2"">Profile</h2>
+            <p>I possess a strong foundation in web development with expertise in both front-end and back-end technologies. My proficiency in HTML, CSS, and JavaScript allows me to create visually appealing and responsive user interfaces. I am skilled in using modern front-end frameworks and libraries such as React and Angular to build dynamic and interactive web applications. On the back-end, I am experienced in server-side technologies like Node.js and Express, enabling me to develop robust and scalable web services. I am proficient in working with databases, including SQL and NoSQL databases, and have hands-on experience in designing and optimizing database schemas</p>
+         </div>
+         <div class="educationinfo">
+            <h3 class="title">Education</h3>
+            <ul>
+              <li>
+               <h5>2022 - till now</h5>
+              <h4>BS Degree in Computer Science</h4>
+              <h4>University of Sialkot</h4>
+              </li>
+              <li>
+               <h5>2020 - 2022</h5>
+              <h4>ADP in Computer Science</h4>
+              <h4>University of Sialkot</h4>
+              </li>
+              <li>
+               <h5>2017 - 2019</h5>
+              <h4>Intermediate in Pre Enginering</h4>
+              <h4>Superior College Sialkot</h4>
+              </li>
+              <li>
+               <h5>2004 - 2017</h5>
+              <h4>Matriculations</h4>
+              <h4>National Grammar School</h4>
+              </li>
+            </ul>
+          </div>
+          <div class="aim">
+            <h2>Life Ambition</h2>
+            <p>My life ambition is to become a proficient full stack web developer because the world of technology has always fascinated me. I love creating websites and applications that combine aesthetic design with seamless functionality. The idea of being able to bring my creative ideas to life through coding excites me immensely. Moreover, being a full stack web developer means having the opportunity to work on both front-end and back-end development, allowing me to have a comprehensive understanding of how websites and applications function as a whole. This knowledge would enable me to tackle complex problems and create innovative solutions. I am driven by the constant evolution of technology, which presents endless learning opportunities in this field. Becoming a proficient full stack web developer would not only allow me to pursue my passion but also provide exciting career prospects that allow for continuous growth and exploration within the industry</p>
+          </div>
+          <div class="country">
+            <h2>What I did for my country</h2>
+            <p>In my current state, I find myself in the process of learning from my mistakes, which has proven to be a significant advantage for me. It is through these mistakes that I am able to gain valuable insights and acquire a deeper understanding of various aspects of life. Each error or misstep brings with it an opportunity for growth and personal development. By acknowledging and accepting our mistakes, we can cultivate a sense of humility and a willingness to learn from them. This mindset allows us to continuously improve ourselves and make better choices in the future. Embracing failure as a stepping stone towards success enables us to embrace new perspectives, sharpen our problem-solving skills, and ultimately become more resilient individuals. Learning from mistakes not only provides us with invaluable life lessons but also helps shape our character by fostering adaptability, perseverance, and self-reflection - all essential qualities for personal growth and achievement.</p>
+          </div>
+          <div class="Pakistan">
+            <h2>What I want do for my country</h2>
+            <p>Hey, as a Muslim myself, I really feel the need to educate my fellow Pakistanis because many of them are unfortunately not aware of the realities surrounding our religion. It's quite disheartening to see misconceptions and stereotypes being perpetuated, often leading to misunderstandings and even discrimination against Muslims. My aim is to enlighten my compatriots by delving into the true teachings and principles of Islam, discussing its rich history, highlighting the importance of peace and compassion for all humankind, as well as debunking common myths associated with our faith. By promoting dialogue and understanding, I hope we can foster harmony within our society and present an accurate portrayal of Islam that goes beyond what mainstream media might suggest. After all, knowledge is power, and when shared wisely it has the potential to bridge gaps and create a more inclusive Pakistan where diversity is celebrated.</p>
+          </div>
+          <div class="about interest">
+            <h2 class="title2">Hobbies</h2>
+            <ol>
+              <li><i class="fa fa-code" aria-hidden="true"></i>Programming</li>
+              <li><i class="fa fa-book" aria-hidden="true"></i>Reading</li>
+              <li><i class="fa fa-history" aria-hidden="true"></i>History</li>
+              <li><i class="fa fa-font-awesome" aria-hidden="true"></i>Strong Fundamentalism</li>
+            </ol>
+         </div>
+         <div>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/qBVqZ8tTJw8?si=AUI3-moCuxCLllRp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         </div>
+         <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.4684718874464!2d74.54053091583788!3d32.49157102267679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea3f5c966e55%3A0xb6d8af19f3a9949f!2sIqbal%20House!5e0!3m2!1sen!2s!4v1699379416418!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+
+      </div>
+      <div class="right-side">
+         <h1>Projects</h1>
+         <h4>Marketing website</h4>
+         <h4>Conference schedule</h4>
+         <h4>Semi E-commerce</h4>
+         <h4>Android App project</h4>
+         <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+      </div>     
+   </div>
+   <footer>
+      <div class="footer-content">
+         <h3>@Faziicodes</h3>
+         <a href="mailto:mianfazeel047@gmail.com"><h3>mianfazeel047@gmail.com</h3></a>
+     <ul class="socials">
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-official" ></i></a></li>
+      <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" ></i></a></li>
+      <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square" ></i></a></li>
+      <li><a href="https://github.com/"><i class="fa fa-github-square" ></i></a></li>
+     </ul>
+      </div>
+   </footer>
+</body>
+</html>
+
+
